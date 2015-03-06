@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gjorgiev.gethired"
+    android:versionCode="6"
+    android:versionName="1.3" xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Blueactionbar" >
+        <activity
+            android:name="com.gjorgiev.gethired.MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize" >
+            
+        </activity>
+        <activity
+            android:name="com.gjorgiev.gethired.SearchActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.gjorgiev.gethired.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gjorgiev.gethired.MainActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gjorgiev.gethired.ResultsActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.gjorgiev.gethired.SearchActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gjorgiev.gethired.SearchActivity" />
+        </activity>
+        <activity
+            android:name="com.gjorgiev.gethired.DetailActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.gjorgiev.gethired.ResultsActivity" 
+            android:configChanges="orientation|screenSize" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gjorgiev.gethired.ResultsActivity" />
+        </activity>
+        <activity
+            android:name="com.gjorgiev.gethired.FullDetailActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize" >
+        </activity>
+        <meta-data android:name="com.google.android.gms.version"
+           android:value="@integer/google_play_services_version" />
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" tools:ignore="ManifestOrder"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

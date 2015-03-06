@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dfLayoutOuter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_detail"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/jobTitleDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/df_layot_job_title"
+        android:gravity="center"
+        android:textColor="#040404"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:typeface="sans" >
+
+    </TextView>
+
+    <ScrollView 
+        android:id="@+id/scrollDetails"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbars="vertical" 
+		android:fillViewport="true"
+		android:layout_below="@+id/jobTitleDetails" >
+        <LinearLayout 
+            android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			
+    <RelativeLayout
+        android:id="@+id/dfLayoutInner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/df_layot">
+
+        <CheckBox
+            android:id="@+id/chk_FavouritesDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:button="@android:drawable/btn_star"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/companyDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:textSize="18sp" 
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/chk_FavouritesDetails"
+            android:textIsSelectable="true">
+        </TextView>
+
+            <LinearLayout
+		        android:id="@+id/location_datetime_layout"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/companyDetails"
+		        android:layout_marginTop="7dp"
+		       	android:layout_toLeftOf="@+id/chk_FavouritesDetails" >
+				<TextView
+				        android:id="@+id/locationDetails"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginTop="1dp"
+				        android:textColor="#343434"
+				        android:textSize="14sp"
+				        android:maxLines="1" >
+				    	</TextView>
+				    <TextView
+				        android:id="@+id/datetimeDetails"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginTop="1dp"
+				        android:textColor="#343434"
+				        android:textSize="14sp"
+				        android:maxLines="1" >
+				    </TextView>
+		    </LinearLayout>
+
+        <WebView
+            android:id="@+id/snippetDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/btn_apply"
+            android:layout_below="@id/location_datetime_layout"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:scrollbars="none" 
+            android:paddingBottom="0dp"
+    		android:paddingLeft="0dp"
+    		android:paddingRight="0dp"
+    		android:paddingTop="0dp" />
+
+        <Button
+            android:id="@+id/btn_apply"
+            style="@style/CustomStyleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/lbl_apply"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+	</LinearLayout>    
+    </ScrollView>
+</RelativeLayout>

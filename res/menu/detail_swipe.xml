@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+	<item
+            android:id="@+id/menu_item_share"
+            android:showAsAction="ifRoom"
+            android:title="Share"
+            android:actionProviderClass="android.widget.ShareActionProvider" />
+	<item android:id="@+id/action_next"
+        	android:icon="@drawable/ic_action_forward"
+        	android:title="@string/action_next"
+        	android:showAsAction="always" />
+</menu>

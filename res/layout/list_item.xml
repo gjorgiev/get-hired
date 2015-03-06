@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Single List Item Design -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp" >
+	
+    
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="right" >
+
+        <CheckBox
+            android:id="@+id/chk_Favourites"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:button="@android:drawable/btn_star"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+    </LinearLayout>
+
+	<LinearLayout
+	    android:id="@+id/TitleAndCompany"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_toLeftOf="@+id/thumbnail"
+	    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/jobTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#040404"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:maxLines="1" 
+    	android:ellipsize="end"
+		android:singleLine="true"
+		android:layout_weight="1" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"      
+        android:textColor="#343434"
+        android:textSize="16sp"
+        android:maxLines="1" 
+        android:layout_weight="1">
+    </TextView>
+
+	</LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/datetime_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TitleAndCompany" 
+        android:layout_gravity="left"
+       	android:layout_alignParentLeft="true" >
+		<TextView
+		        android:id="@+id/location"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="1dp"
+		        android:textColor="#343434"
+		        android:textSize="14sp"
+		        android:textStyle="italic"
+		        android:maxLines="1" >
+		    	</TextView>
+		    <TextView
+		        android:id="@+id/datetime"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="1dp"
+		        android:textColor="#343434"
+		        android:textStyle="italic"
+		        android:textSize="14sp"
+		        android:maxLines="1" >
+		    </TextView>
+    </LinearLayout>
+
+
+</RelativeLayout>

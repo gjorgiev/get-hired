@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/action_favorites"
+        	android:icon="@drawable/ic_action_important"
+        	android:title="@string/lbl_favorites"
+        	android:showAsAction="always" />
+
+	<item android:id="@+id/action_search"
+        	android:icon="@drawable/ic_action_search"
+        	android:title="@string/lbl_find"
+        	android:showAsAction="always" />
+</menu>

@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+<android.support.v4.view.ViewPager
+    android:id="@+id/pager"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:layout_gravity="top"
+    android:background="@drawable/bg_results" />
+
+<com.google.android.gms.ads.AdView
+    android:id="@+id/ad"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    ads:adSize="SMART_BANNER"
+    android:layout_gravity="bottom"
+    ads:adUnitId="@string/ad_unit_id" >
+</com.google.android.gms.ads.AdView>
+
+
+</LinearLayout>
